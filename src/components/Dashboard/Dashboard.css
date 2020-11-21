@@ -6,7 +6,11 @@
 
 .leftPanel {
   width: 5%;
+<<<<<<< HEAD
   background-color: #04bfbf;
+=======
+  background-color: turquoise;
+>>>>>>> e5f09e88bf8863b0577cfc8a61a62300b08bd555
 }
 
 .rightContent {
@@ -14,6 +18,7 @@
   background-color: white;
   color: black;
 }
+<<<<<<< HEAD
 
 .icons {
   box-sizing: border-box;
@@ -42,3 +47,5 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
+=======
+>>>>>>> e5f09e88bf8863b0577cfc8a61a62300b08bd555
