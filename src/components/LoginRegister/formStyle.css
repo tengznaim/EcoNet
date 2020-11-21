@@ -1,0 +1,59 @@
+.mainWrapper {
+  font-family: roboto, sans-serif;
+}
+
+.login,
+.register {
+  color: black;
+  text-decoration: none;
+  padding: 10px;
+  margin: 10px;
+  font-size: 15px;
+}
+
+.loginTitle,
+.regTitle {
+  color: #17224d;
+}
+
+.currentLink {
+  border-bottom: 1px solid turquoise;
+}
+
+.loginWrapper {
+  zoom: 1.2;
+  width: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  padding: 10px;
+}
+
+.inputBox {
+  margin: 10px;
+}
+
+.inputBox input {
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid turquoise;
+  font-family: montserrat, sans-serif;
+}
+
+input[type="text"],
+input[type="password"],
+textarea,
+select {
+  outline: none;
+}
+
+.btn {
+  background: white;
+  border: 1px solid turquoise;
+  padding: 10px;
+  margin: 10px;
+  font-family: montserrat, sans-serif;
+  cursor: pointer;
+}

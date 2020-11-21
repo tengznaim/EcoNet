@@ -1,0 +1,16 @@
+.dashboardMain {
+  height: 100vh;
+  display: flex;
+  color: white;
+}
+
+.leftPanel {
+  width: 5%;
+  background-color: turquoise;
+}
+
+.rightContent {
+  width: 95%;
+  background-color: white;
+  color: black;
+}
