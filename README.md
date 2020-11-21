@@ -17,7 +17,6 @@
   - Prompt location
 - Broadcast request to recycling centres
   - Duration - 1 week
-  -
 - Accepted requests
   - The recycling centre gives an approximate range amount of money.
 - Payment system

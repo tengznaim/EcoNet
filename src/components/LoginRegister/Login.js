@@ -7,9 +7,9 @@ function Login(props){
     const[username, setUsername] = useState("");
     const[count, setCount] = useState(0);
 
-    function handleLogin(){
-        console.log(username);
-        props.history.push("/dashboard")
+    function onSubmit(){
+        props.handleLogin(username);
+        props.history.push("/dashboard");
     }
 
     return(
@@ -24,15 +24,15 @@ function Login(props){
                 Register
                 </Link>
                 <h1 className="loginTitle">Welcome Back!</h1>
-                <div className="inputBox">
-                    <input type="text" id="username" value={username} onChange={(e)=> setUsername(e.target.value)}placeholder="Username" autocomplete="off"/>
-                </div>
-                <div className="inputBox">
-                    <input type="password" id="password" placeholder="Password"/>
-                </div>
-
-                
-                <button className="btn" onClick={handleLogin}>Sign In</button>
+                <form onSubmit={onSubmit}>
+                    <div className="inputBox">
+                        <input type="text" id="username" value={username} onChange={(e)=> setUsername(e.target.value)}placeholder="Username" autocomplete="off"/>
+                    </div>
+                    <div className="inputBox">
+                        <input type="password" id="password" placeholder="Password"/>
+                    </div>
+                    <button className="btn">Sign In</button>
+                </form>
                 {/*
                 <h2>Number: { count } </h2>
                 <button className="btn" onClick= {() => setCount(count + 1)}>
