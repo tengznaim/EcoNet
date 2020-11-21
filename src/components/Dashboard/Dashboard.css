@@ -6,11 +6,39 @@
 
 .leftPanel {
   width: 5%;
-  background-color: turquoise;
+  background-color: #04bfbf;
 }
 
 .rightContent {
   width: 95%;
   background-color: white;
   color: black;
+}
+
+.icons {
+  box-sizing: border-box;
+  margin: 8px;
+  zoom: 2.5;
+}
+
+.links {
+  color: inherit;
+}
+
+.currentPage {
+  border-bottom: 4px solid white;
+}
+
+#logout {
+  float: right;
+  zoom: 1.2;
+}
+
+#homeText {
+  color: #17224d;
+  position: relative;
+  float: left;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
