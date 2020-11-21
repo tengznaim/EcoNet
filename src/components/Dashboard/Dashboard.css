@@ -1,4 +1,5 @@
 .dashboardMain {
+  font: roboto, sans-serif;
   height: 100vh;
   display: flex;
   color: white;
@@ -6,11 +7,15 @@
 
 .leftPanel {
   width: 5%;
-<<<<<<< HEAD
   background-color: #04bfbf;
-=======
-  background-color: turquoise;
->>>>>>> e5f09e88bf8863b0577cfc8a61a62300b08bd555
+}
+
+.leftPanelText {
+  font-size: small;
+  margin: 2px;
+  display: table;
+  margin: 0 auto;
+  margin-bottom: 10px;
 }
 
 .rightContent {
@@ -18,20 +23,30 @@
   background-color: white;
   color: black;
 }
-<<<<<<< HEAD
 
 .icons {
   box-sizing: border-box;
-  margin: 8px;
-  zoom: 2.5;
+  zoom: 2;
+  display: table;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.iconGroup {
+  box-sizing: border-box;
 }
 
 .links {
+  text-decoration: none;
   color: inherit;
 }
 
-.currentPage {
-  border-bottom: 4px solid white;
+.formWrapper {
+  position: absolute;
+  float: left;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #logout {
@@ -47,5 +62,3 @@
   left: 50%;
   transform: translate(-50%, -50%);
 }
-=======
->>>>>>> e5f09e88bf8863b0577cfc8a61a62300b08bd555
