@@ -1,25 +1,38 @@
 import React, {useState} from 'react';
 import "../Dashboard/Dashboard.css";
-import { AiOutlineWallet } from 'react-icons/ai';
-import { AiOutlineMessage, AiOutlineHome } from 'react-icons/ai';
-import { VscAccount } from 'react-icons/vsc';
 import {Link} from 'react-router-dom';
 import {Button, TextField} from '@material-ui/core';
 import IconButton from '@material-ui/core/IconButton';
 import RemoveIcon from '@material-ui/icons/Remove';
 import AddIcon from '@material-ui/icons/Add';
 import Panel from "../sidePanel";
+import {makeStyles} from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+    root: {
+      '& .MuiTextField-root': {
+        margin: theme.spacing(1),
+
+      },
+    },
+    button: {
+        margin: theme.spacing(1),
+    }
+  }));
+
 
 function Dashboard(props){
+
+    const classes = useStyles();
 
     function handleLogout(){
         props.history.push("/");
     }
 
-    const[inputList, setInputList] = useState([{item:""}]);
+    const[inputList, setInputList] = useState([{item:"", quantity:""}]);
 
     function addField() {
-        setInputList([...inputList, {item:""}]);
+        setInputList([...inputList, {item:"",quantity:""}]);
     }
 
     const removeField = (index) => {
@@ -29,7 +42,16 @@ function Dashboard(props){
     }
 
     function handleSubmit(){
+        props.handleSubmit(inputList);
         props.history.push("/map");
+    }
+
+    const handleInput = (index, event) => {
+        console.log(event.target);
+        const values = [...inputList];
+        console.log(values);
+        values[index][event.target.name] = event.target.value;
+        setInputList(values);
     }
     
     return(
@@ -37,13 +59,16 @@ function Dashboard(props){
             <Panel />
             <div className="rightContent">
                 <button className="btn" id="logout" onClick={handleLogout}>Logout</button>
+                <div className="contentWrapper">
+                {props.username ? <span>Hi {props.username}!</span> : null}
                 <h1 id="homeText">What would you like to recycle today?</h1>
-                <form action="">
-                    <div className="formWrapper">
+                <form className={classes.root} action="">
                         {inputList.map((input, index) => (
                         <div key={index}>
-                            <TextField id="text-input" variant="outlined" label="Item eg. Plastic Bottle" value={input.item}/>
-                             <IconButton onClick={(index) => removeField()}>
+                            <TextField name="item" id="text-input" variant="outlined" label="Item eg. Plastic Bottle" value={input.item} onChange={event => handleInput(index, event)}/>
+                            <TextField name="quantity" id="text-input" variant="outlined" label="Weight eg. 1kg" value={input.quantity}
+                            onChange={event => handleInput(index, event)}/>
+                            <IconButton onClick={(index) => removeField()}>
                                 <RemoveIcon/>
                             </IconButton>
                             <IconButton onClick={addField}>
@@ -51,11 +76,11 @@ function Dashboard(props){
                             </IconButton>
                             </div>
                         ))}
-                        <Button variant="contained" color="primary" onClick={handleSubmit}>
+                        <Button variant="contained" color="primary" onClick={handleSubmit} className={classes.button}>
                             Recycle!
                         </Button>
-                        </div>
                     </form>
+                </div>
                 </div>
             </div>
     )

@@ -15,6 +15,7 @@ function Login(props){
     return(
         <div>
             <div className="mainWrapper">
+                <h1 className="landingTitle" id="titleBlue">Eco<span className="landingTitle" id="titleGreen">Net</span></h1>
             <div className="loginWrapper">
                 <Link className="login currentLink" to="/">
                     Sign In

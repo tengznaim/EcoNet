@@ -41,8 +41,8 @@
   color: inherit;
 }
 
-.formWrapper {
-  position: absolute;
+.contentWrapper {
+  position: relative;
   float: left;
   top: 30%;
   left: 50%;
@@ -56,9 +56,4 @@
 
 #homeText {
   color: #17224d;
-  position: relative;
-  float: left;
-  top: 10%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }

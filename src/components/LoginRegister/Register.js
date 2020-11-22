@@ -11,6 +11,7 @@ function Register(props){
     return(
         <div>
             <div className="mainWrapper">
+                <h1 className="landingTitle" id="titleBlue">Eco<span className="landingTitle" id="titleGreen">Net</span></h1>
             <div class="loginWrapper">
                 <Link className="login" to="/">
                     Sign In

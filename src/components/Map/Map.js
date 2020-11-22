@@ -38,7 +38,13 @@ function Map(props) {
                     lng: event.latLng.lng(),
                 })}}>
                     <Marker position={{lat:marker.lat, lng:marker.lng,}} icon={{url: 'recycling.svg', scaledSize: new window.google.maps.Size(40,40), anchor: new window.google.maps.Point(20,20)}} onClick={() => setSelected(marker)}/>
-                    {selected ? <InfoWindow position={{lat:selected.lat, lng: selected.lng}} onCloseClick={(event) => setSelected(null)}><div><h3>Plastic Bottles : 20</h3></div></InfoWindow> : null}
+                    {selected ? <InfoWindow position={{lat:selected.lat, lng: selected.lng}} onCloseClick={(event) => setSelected(null)}><div>
+                        <h3 id="mapUsername">{props.username}</h3>
+                        {props.recyclables.map((input, index) => (
+                        <div key={index}>
+                            <h3>{input.item} : {input.quantity}</h3>
+                            </div>
+                        ))}</div></InfoWindow> : null}
                 </GoogleMap>
             </div>
         </div>
