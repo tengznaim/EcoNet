@@ -1,0 +1,40 @@
+.chatList {
+  background-color: rgb(245, 245, 245);
+  width: 30%;
+}
+
+.chatInput {
+  display: flex;
+}
+
+.messageList {
+  background-color: #e8e8e8;
+  height: 90%;
+  zoom: 1.33;
+}
+
+.messageWrapper {
+  width: 70%;
+}
+
+#sendButton {
+  display: flex;
+  margin: 10px;
+}
+
+#messageInput {
+  display: flex;
+  background: none;
+  border: none;
+  border-bottom: 1px solid turquoise;
+  font-size: 20px;
+  color: #17224d;
+  padding: 5px;
+  width: 60vw;
+  outline: none;
+  margin: 10px;
+}
+
+#chatWrapper {
+  display: flex;
+}
