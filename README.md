@@ -1,10 +1,10 @@
 # Recycling App Project built for UniHack 2020
 
-# Update 22/11/2020
+## Update 22/11/2020
 
 - We were finalists, went through a final pitching stage and ranked 3rd among the finalists after public and judge voting! :D
 
-## Theme: Waste Management System
+### Theme: Waste Management System
 
 - Creator: Recycling Centers
 - Consumer: Recyclers
